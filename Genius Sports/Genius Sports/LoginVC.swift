@@ -10,6 +10,16 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    
+    @IBAction func loginPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func createAccountPressed(sender: AnyObject) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
