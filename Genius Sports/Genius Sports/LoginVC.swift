@@ -8,20 +8,94 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController,SignedInProtocol {
 
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
     @IBAction func loginPressed(sender: AnyObject) {
+        
+        var message = ""
+        
+        if emailField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            message = "Please provide email"
+        }
+        
+        if passwordField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            message = "Please provide password"
+        }
+        
+        
+        if message.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) != 0 {
+            var alert:UIAlertView = UIAlertView(title: "Message", message: message, delegate: nil, cancelButtonTitle: "Ok")
+            
+            alert.show()
+        }
+            
+        else {
+            User.currentUser().login(emailField.text, password: passwordField.text)
+        }
+        
+        
     }
+    
+ 
     
     @IBAction func createAccountPressed(sender: AnyObject) {
+        
+        var message = ""
+        
+        if emailField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            message = "Please provide email"
+        }
+        
+        if passwordField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            message = "Please provide password"
+        }
+        
+        
+        if message.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) != 0 {
+            var alert:UIAlertView = UIAlertView(title: "Message", message: message, delegate: nil, cancelButtonTitle: "Ok")
+            
+            alert.show()
+        }
+            
+        else {
+            User.currentUser().getUserToken(emailField.text, password: passwordField.text)
+        }
+        
+        
     }
     
+    func goToApp() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewControllerWithIdentifier("Main") as UINavigationController
+        
+        
+        
+        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
+    }
+    
+    func signInUnsuccesful(error: String) {
+        var alert:UIAlertView = UIAlertView(title: "SignIn Unsuccesful", message: error, delegate: nil, cancelButtonTitle: "Ok")
+        
+        alert.show()
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        User.currentUser().delegate = self
+        
+        if let token = User.currentUser().token {
+            
+            
+            goToApp()
+            
+            
+        }
 
         // Do any additional setup after loading the view.
     }
