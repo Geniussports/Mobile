@@ -18,6 +18,7 @@
 		5A90037A1AAB4AFF00715A5C /* PlayerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */; };
 		5A90037C1AAB4B2D00715A5C /* ScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */; };
 		5A90037E1AAB4B5000715A5C /* RosterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037D1AAB4B5000715A5C /* RosterTVC.swift */; };
+		98E6789C1AAB50E700CB2AF8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6789B1AAB50E700CB2AF8 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoVC.swift; sourceTree = "<group>"; };
 		5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTVC.swift; sourceTree = "<group>"; };
 		5A90037D1AAB4B5000715A5C /* RosterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTVC.swift; sourceTree = "<group>"; };
+		98E6789B1AAB50E700CB2AF8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				5A90036A1AAA92F700715A5C /* View Controllers */,
 				5A9003461AAA90E000715A5C /* AppDelegate.swift */,
 				5A90034A1AAA90E000715A5C /* Main.storyboard */,
+				98E6789B1AAB50E700CB2AF8 /* API.swift */,
 				5A90034D1AAA90E000715A5C /* Images.xcassets */,
 				5A90034F1AAA90E000715A5C /* LaunchScreen.xib */,
 				5A9003441AAA90E000715A5C /* Supporting Files */,
@@ -241,6 +244,7 @@
 				5A9003691AAA91FD00715A5C /* PrettyButtons.swift in Sources */,
 				5A9003471AAA90E000715A5C /* AppDelegate.swift in Sources */,
 				5A9003761AAB4A0C00715A5C /* LoginVC.swift in Sources */,
+				98E6789C1AAB50E700CB2AF8 /* API.swift in Sources */,
 				5A90037A1AAB4AFF00715A5C /* PlayerInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,7 @@
 				5A9003621AAA90E100715A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A9003631AAA90E100715A5C /* Build configuration list for PBXNativeTarget "Genius SportsTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +450,7 @@
 				5A9003651AAA90E100715A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
