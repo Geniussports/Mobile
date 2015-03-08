@@ -34,14 +34,12 @@ class PlayerInfoVC: UIViewController,
     
     var imagePicker = UIImagePickerController()
     
-    imagePicker.delegate = self
-    imagePicker.sourceType = .Camera
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
         var image = info[UIImagePickerControllerOriginalImage] as UIImage
         
-        self.seatImageView.image = image
+//        self.seatImageView.image = image
         
         picker.dismissViewControllerAnimated(true, completion: nil)
         
@@ -71,6 +69,9 @@ class PlayerInfoVC: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//        imagePicker.delegate = self
+//        imagePicker.sourceType = .Camera
 
         // Do any additional setup after loading the view.
     }
