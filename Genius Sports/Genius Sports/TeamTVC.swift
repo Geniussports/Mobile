@@ -10,7 +10,7 @@ import UIKit
 
 class TeamTVC: UITableViewController, UITableViewDelegate {
 
-    var teamContent: [String] = ["test","test2"]
+    var teamInfo: [String] = ["test"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +51,8 @@ class TeamTVC: UITableViewController, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = teamContent[0]
-    
-        cell.detailTextLabel?.text = teamContent[1]
+        cell.textLabel?.text = teamInfo[indexPath.row]
+
         
         return cell
         

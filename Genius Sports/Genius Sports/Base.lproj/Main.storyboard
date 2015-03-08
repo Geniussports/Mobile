@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qgj-pm-USR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,41 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZa-ur-Ayo">
-                                <rect key="frame" x="16" y="154" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="BfK-QD-1I2"/>
-                                    <constraint firstAttribute="height" constant="30" id="T3J-4e-D1M"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZa-ur-Ayo">
+                                <rect key="frame" x="16" y="192" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aN-JD-6ye">
-                                <rect key="frame" x="16" y="198" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EtN-KY-BCG"/>
-                                    <constraint firstAttribute="width" constant="288" id="FtG-wi-vQc"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aN-JD-6ye">
+                                <rect key="frame" x="16" y="237" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sz-Jj-hG1" customClass="DesignableButton" customModule="Genius_Sports" customModuleProvider="target">
-                                <rect key="frame" x="85" y="269" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="VPM-Mo-Rd5"/>
-                                    <constraint firstAttribute="height" constant="30" id="miP-sb-2eH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sz-Jj-hG1" customClass="DesignableButton" customModule="Genius_Sports" customModuleProvider="target">
+                                <rect key="frame" x="85" y="300" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="log in">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                        <color key="value" red="0.66666666669999997" green="0.062780515509999996" blue="0.27751584029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.49666389230000002" green="0.72992315249999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="topColorAlpha">
                                         <real key="value" value="0.5"/>
@@ -64,15 +52,11 @@
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upU-Ql-ZTO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-EL-DO9" customClass="DesignableButton" customModule="Genius_Sports" customModuleProvider="target">
-                                <rect key="frame" x="85" y="313" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="coX-32-bIi"/>
-                                    <constraint firstAttribute="height" constant="30" id="icd-zW-IwN"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-EL-DO9" customClass="DesignableButton" customModule="Genius_Sports" customModuleProvider="target">
+                                <rect key="frame" x="85" y="349" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="create account">
-                                    <color key="titleColor" red="0.070588235289999995" green="0.16862745100000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -82,26 +66,22 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerSize">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.49666389230000002" green="0.72992315249999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bia-YM-9TU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gs-logo_360.png" translatesAutoresizingMaskIntoConstraints="NO" id="aH3-co-cpx">
+                                <rect key="frame" x="40" y="49" width="240" height="128"/>
+                            </imageView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="pZa-ur-Ayo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="1QK-yc-fVd"/>
-                            <constraint firstItem="pZa-ur-Ayo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3X9-eO-reY"/>
-                            <constraint firstAttribute="centerX" secondItem="1Sz-Jj-hG1" secondAttribute="centerX" id="Alm-o0-X8D"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ix7-EL-DO9" secondAttribute="bottom" constant="225" id="RAC-e6-eDS"/>
-                            <constraint firstItem="9aN-JD-6ye" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RPm-R2-97g"/>
-                            <constraint firstItem="Ix7-EL-DO9" firstAttribute="top" secondItem="1Sz-Jj-hG1" secondAttribute="bottom" constant="14" id="Vje-XQ-u6y"/>
-                            <constraint firstItem="1Sz-Jj-hG1" firstAttribute="top" secondItem="9aN-JD-6ye" secondAttribute="bottom" constant="41" id="Z1P-zt-nbv"/>
-                            <constraint firstItem="pZa-ur-Ayo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jND-NU-p8s"/>
-                            <constraint firstItem="9aN-JD-6ye" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tu3-Y4-ggQ"/>
-                            <constraint firstItem="Ix7-EL-DO9" firstAttribute="top" secondItem="1Sz-Jj-hG1" secondAttribute="bottom" constant="14" id="u3c-YP-N79"/>
-                            <constraint firstAttribute="centerX" secondItem="Ix7-EL-DO9" secondAttribute="centerX" id="uKY-Sg-tB7"/>
-                            <constraint firstItem="9aN-JD-6ye" firstAttribute="top" secondItem="pZa-ur-Ayo" secondAttribute="bottom" constant="14" id="z7s-ud-Fms"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -436,4 +416,7 @@
             <point key="canvasLocation" x="418" y="-1061"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gs-logo_360.png" width="360" height="300"/>
+    </resources>
 </document>

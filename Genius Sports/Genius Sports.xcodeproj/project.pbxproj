@@ -18,6 +18,7 @@
 		5A90037A1AAB4AFF00715A5C /* PlayerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */; };
 		5A90037C1AAB4B2D00715A5C /* ScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */; };
 		5A90037E1AAB4B5000715A5C /* RosterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037D1AAB4B5000715A5C /* RosterTVC.swift */; };
+		5A9BFC461AAC86F400F6CC1C /* gs-logo_360.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BFC451AAC86F400F6CC1C /* gs-logo_360.png */; };
 		5ADA50EA1AABAAA90065F9B8 /* PlayerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA50E91AABAAA90065F9B8 /* PlayerTVC.swift */; };
 		98E6789C1AAB50E700CB2AF8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6789B1AAB50E700CB2AF8 /* API.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoVC.swift; sourceTree = "<group>"; };
 		5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTVC.swift; sourceTree = "<group>"; };
 		5A90037D1AAB4B5000715A5C /* RosterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTVC.swift; sourceTree = "<group>"; };
+		5A9BFC451AAC86F400F6CC1C /* gs-logo_360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gs-logo_360.png"; sourceTree = "<group>"; };
 		5ADA50E91AABAAA90065F9B8 /* PlayerTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTVC.swift; sourceTree = "<group>"; };
 		98E6789B1AAB50E700CB2AF8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				5A90034F1AAA90E000715A5C /* LaunchScreen.xib */,
 				5A9003441AAA90E000715A5C /* Supporting Files */,
 				5A9003681AAA91FD00715A5C /* PrettyButtons.swift */,
+				5A9BFC451AAC86F400F6CC1C /* gs-logo_360.png */,
 			);
 			path = "Genius Sports";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				5A90034C1AAA90E000715A5C /* Main.storyboard in Resources */,
 				5A9003511AAA90E000715A5C /* LaunchScreen.xib in Resources */,
+				5A9BFC461AAC86F400F6CC1C /* gs-logo_360.png in Resources */,
 				5A90034E1AAA90E000715A5C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
