@@ -15,6 +15,8 @@ class TeamTVC: UITableViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        User.currentUser().getTeamInfo()
+        
         // Uncomment the following line to preserve selection between presentations
 //         self.clearsSelectionOnViewWillAppear = false
 
