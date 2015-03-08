@@ -14,10 +14,11 @@
 		5A90035D1AAA90E000715A5C /* Genius_SportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90035C1AAA90E000715A5C /* Genius_SportsTests.swift */; };
 		5A9003691AAA91FD00715A5C /* PrettyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003681AAA91FD00715A5C /* PrettyButtons.swift */; };
 		5A9003761AAB4A0C00715A5C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003751AAB4A0C00715A5C /* LoginVC.swift */; };
-		5A9003781AAB4A4200715A5C /* PlayerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003771AAB4A4200715A5C /* PlayerTVC.swift */; };
+		5A9003781AAB4A4200715A5C /* TeamTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003771AAB4A4200715A5C /* TeamTVC.swift */; };
 		5A90037A1AAB4AFF00715A5C /* PlayerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */; };
 		5A90037C1AAB4B2D00715A5C /* ScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */; };
 		5A90037E1AAB4B5000715A5C /* RosterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A90037D1AAB4B5000715A5C /* RosterTVC.swift */; };
+		5ADA50EA1AABAAA90065F9B8 /* PlayerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA50E91AABAAA90065F9B8 /* PlayerTVC.swift */; };
 		98E6789C1AAB50E700CB2AF8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6789B1AAB50E700CB2AF8 /* API.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +44,11 @@
 		5A90035C1AAA90E000715A5C /* Genius_SportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius_SportsTests.swift; sourceTree = "<group>"; };
 		5A9003681AAA91FD00715A5C /* PrettyButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyButtons.swift; sourceTree = "<group>"; };
 		5A9003751AAB4A0C00715A5C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		5A9003771AAB4A4200715A5C /* PlayerTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTVC.swift; sourceTree = "<group>"; };
+		5A9003771AAB4A4200715A5C /* TeamTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTVC.swift; sourceTree = "<group>"; };
 		5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoVC.swift; sourceTree = "<group>"; };
 		5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTVC.swift; sourceTree = "<group>"; };
 		5A90037D1AAB4B5000715A5C /* RosterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTVC.swift; sourceTree = "<group>"; };
+		5ADA50E91AABAAA90065F9B8 /* PlayerTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTVC.swift; sourceTree = "<group>"; };
 		98E6789B1AAB50E700CB2AF8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,8 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				5A9003751AAB4A0C00715A5C /* LoginVC.swift */,
-				5A9003771AAB4A4200715A5C /* PlayerTVC.swift */,
+				5A9003771AAB4A4200715A5C /* TeamTVC.swift */,
 				5A9003791AAB4AFF00715A5C /* PlayerInfoVC.swift */,
+				5ADA50E91AABAAA90065F9B8 /* PlayerTVC.swift */,
 				5A90037B1AAB4B2D00715A5C /* ScheduleTVC.swift */,
 				5A90037D1AAB4B5000715A5C /* RosterTVC.swift */,
 			);
@@ -239,8 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A90037C1AAB4B2D00715A5C /* ScheduleTVC.swift in Sources */,
-				5A9003781AAB4A4200715A5C /* PlayerTVC.swift in Sources */,
+				5A9003781AAB4A4200715A5C /* TeamTVC.swift in Sources */,
 				5A90037E1AAB4B5000715A5C /* RosterTVC.swift in Sources */,
+				5ADA50EA1AABAAA90065F9B8 /* PlayerTVC.swift in Sources */,
 				5A9003691AAA91FD00715A5C /* PrettyButtons.swift in Sources */,
 				5A9003471AAA90E000715A5C /* AppDelegate.swift in Sources */,
 				5A9003761AAB4A0C00715A5C /* LoginVC.swift in Sources */,

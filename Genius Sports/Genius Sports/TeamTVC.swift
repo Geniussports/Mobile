@@ -1,5 +1,5 @@
 //
-//  PlayerTVC.swift
+//  TeamTVC.swift
 //  Genius Sports
 //
 //  Created by Richard Tyran on 3/7/15.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class PlayerTVC: UITableViewController, UITableViewDelegate {
+class TeamTVC: UITableViewController, UITableViewDelegate {
 
-    var playerContent: [String] = ["test","test2"]
+    var teamContent: [String] = ["test","test2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+//         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,24 +38,33 @@ class PlayerTVC: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
+        
         return 1
+        
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        //
+//        let cell  = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = teamContent[0]
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath) as UITableViewCell
-    
-    cell.textLabel?.text = teamContent[0]
-    
-    cell.detailTextLabel?.text = teamContent[1]
-    
-    return cell
+        cell.detailTextLabel?.text = teamContent[1]
+        
+        return cell
+        
+    }
     
     
-        }
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showDetail" {
+//            
+//        }
+//    }
 
     /*
     // Override to support conditional editing of the table view.
