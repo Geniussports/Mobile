@@ -33,6 +33,7 @@ class LoginVC: UIViewController,SignedInProtocol {
         }
             
         else {
+            
             User.currentUser().login(emailField.text, password: passwordField.text)
         }
         
@@ -84,13 +85,13 @@ class LoginVC: UIViewController,SignedInProtocol {
     
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         User.currentUser().delegate = self
         
+        
         if let token = User.currentUser().token {
-            
             
             goToApp()
             

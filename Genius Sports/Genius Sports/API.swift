@@ -96,11 +96,10 @@ class User {
     var delegate: LoginVC?
     
     var token: String?{
-        
         didSet {
             
             let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(token, forKey: "token")
+            defaults.setObject(token, forKey: "authentication_token")
             defaults.synchronize()
             
             println(token)
@@ -109,11 +108,25 @@ class User {
         }
     }
     
+    var teamId: String?{
+        
+        didSet {
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(teamId, forKey: "id")
+            defaults.synchronize()
+            
+            println(teamId)
+            
+        }
+    }
+    
     init(){
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        token = defaults.objectForKey("token") as? String
-        
+        token = defaults.objectForKey("authentication_token") as? String
+        teamId = defaults.objectForKey("id") as? String
+            
     }
     
     class func currentUser() -> User { return _currentUser }
@@ -188,12 +201,22 @@ class User {
             "method": "POST",
             "body": [
                 
-                "user": [ "email": email, "password": password ]
-                
-                
-            ]
+                "user": [ "email": email, "password": password ]],
+            
+            
         ]
         
+        
+        
+        
+//        "teams": [
+//        {
+//        "id": 2,
+//        "name": "Crazy Crazy Cats",
+//        "created_at": "2015-03-07T21:40:45.880Z",
+//        "updated_at": "2015-03-07T21:40:45.880Z"
+//        }
+//        ]
         
         // responseInfo will be set at the end of the requestwithoptions function: (completion: requestWithoptions), then we will print responseInfo
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
@@ -211,11 +234,27 @@ class User {
             
             
             //                println(responseInfo!)
-            if let dataInfo: AnyObject = responseInfo["user"] {
+            if let dataInfo = responseInfo["user"] as? [String:AnyObject] {
                 if let token = dataInfo["authentication_token"] as? String {
                     self.token = token
                 }
                 
+                
+                
+                
+                self.delegate?.goToApp()
+                
+            }
+                
+            if let teamInfo = responseInfo["teams"] as? [[String:AnyObject]] {
+                
+                if teamInfo.count < 0 {
+                    
+                    let id: AnyObject = teamInfo[0]["id"]!
+                    
+                    self.teamId = "\(id)"
+                    
+                }
                 
                 
                 
