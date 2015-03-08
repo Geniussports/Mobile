@@ -21,6 +21,7 @@ typealias ResponseBlock = (responseInfo: [String : AnyObject]) -> ()
 
 class APIRequest {
     
+    
     // (responseInfo: [String : AnyObject]) -> ()
     
     class func requestWithEndpoint(endpoint: String, method: String, completion:ResponseBlock) {
@@ -49,24 +50,35 @@ class APIRequest {
         
         request.HTTPMethod = options["method"] as String
         
-        //// BODY
+        switch request.HTTPMethod {
+            
+        case "GET" :
+            
+            url = NSURL(string: API_URL + (options["endpoint"] as String) + "?auth_token=" + User.currentUser().token!)
+            
+            request.URL = url
+            
+        default : // POST
         
-        let bodyInfo = options["body"] as [String:AnyObject]
+            //// BODY
+            
+            let bodyInfo = options["body"] as [String:AnyObject]
+            
+            let requestData = NSJSONSerialization.dataWithJSONObject(bodyInfo, options: NSJSONWritingOptions.allZeros, error: nil)
+            
+            let jsonString = NSString(data: requestData!, encoding: NSUTF8StringEncoding)
+            
+            let postLength = "\(jsonString!.length)"
+            
+            request.setValue(postLength, forHTTPHeaderField: "Content-Length")
+            
+            let postData = jsonString?.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+            
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            request.HTTPBody = postData
         
-        let requestData = NSJSONSerialization.dataWithJSONObject(bodyInfo, options: NSJSONWritingOptions.allZeros, error: nil)
-        
-        let jsonString = NSString(data: requestData!, encoding: NSUTF8StringEncoding)
-        
-        let postLength = "\(jsonString!.length)"
-        
-        request.setValue(postLength, forHTTPHeaderField: "Content-Length")
-        
-        let postData = jsonString?.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-        
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        request.HTTPBody = postData
-        
+        }
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
             
@@ -246,13 +258,17 @@ class User {
                 
             }
                 
-            if let teamInfo = responseInfo["teams"] as? [[String:AnyObject]] {
+            if let teams = responseInfo["teams"] as? [[String:AnyObject]] {
                 
-                if teamInfo.count < 0 {
+                println(teams)
+                
+                if teams.count > 0 {
                     
-                    let id: AnyObject = teamInfo[0]["id"]!
+                    let id: AnyObject = teams[0]["id"]!
                     
                     self.teamId = "\(id)"
+                    
+                    println(teams)
                     
                 }
                 
@@ -276,6 +292,24 @@ class User {
             // do something here after request is done
             
         })
+    }
+    
+    func getTeamInfo() {
+        
+        
+        
+        let options: [String:AnyObject] = [
+            
+            "endpoint": "teams/\(User.currentUser().teamId!)",
+            "method": "GET"
+            
+        ]
+        
+        APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
+
+            
+        })
+        
     }
     
 }
