@@ -102,6 +102,8 @@ class APIRequest {
 
 private let _currentUser = User()
 
+
+
 class User {
     
     
@@ -120,6 +122,7 @@ class User {
         }
     }
     
+    
     var teamId: String?{
         
         didSet {
@@ -128,18 +131,36 @@ class User {
             defaults.setObject(teamId, forKey: "id")
             defaults.synchronize()
             
-            println(teamId)
             
         }
     }
+    
+    
+    
+//    var teamName: String?{
+//    
+//        didSet {
+//        
+//            let defaults = NSUserDefaults.standardUserDefaults()
+//            defaults.setObject(teamName, forKey: "name")
+//            defaults.synchronize()
+//            
+//            println("the team name \(teamName)")
+//        
+//            }
+//    }
+    
     
     init(){
         
         let defaults = NSUserDefaults.standardUserDefaults()
         token = defaults.objectForKey("authentication_token") as? String
         teamId = defaults.objectForKey("id") as? String
-            
+//        teamName = defaults.objectForKey("name") as? String
+        
     }
+    
+    
     
     class func currentUser() -> User { return _currentUser }
     
@@ -306,9 +327,13 @@ class User {
         ]
         
         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
-
+            
+            println(responseInfo)
+            
+            
             
         })
+        
         
     }
     
